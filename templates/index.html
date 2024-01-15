@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <title>Thesaurus Demo</title>
+</head>
+
+<body>
+  <h3>A Thesaurus</h3>
+  <form action="/" method="post">
+    <input type="text" name="word" placeholder="Enter a word" required />
+    <input type="submit" value="Get Synonyms" />
+  </form>
+  <br>
+
+  <div max-width: 500px;>
+  {% if posts %}
+  Synonyms for <b>{{ word }}</b>
+  {% for post in posts %}
+  <p>
+    <i>{{ post.synonym }}</i> - {{ post.definition }}
+  </p>
+  {% endfor %}
+  {% endif %}
+</div>
+</body>
