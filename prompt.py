@@ -1,7 +1,7 @@
 from rich import print
 from openai import Client
 from time import sleep
-import json
+import json, os
 
 def use_thesaurus(word):
 
