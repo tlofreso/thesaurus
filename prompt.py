@@ -30,7 +30,7 @@ def use_thesaurus(word):
         assistant_id=assistant.id
     )
 
-    while run.status in ["queued", "in_progress", "ccancelling"]:
+    while run.status in ["queued", "in_progress", "cancelling"]:
         sleep(2)
         run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
 
